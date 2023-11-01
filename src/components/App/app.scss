@@ -1,0 +1,16 @@
+.app__inner {
+  display: flex;
+  flex-direction: row;
+}
+
+.app__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & .logomain {
+    margin-bottom: 50px;;
+  }
+}
+
+
+
