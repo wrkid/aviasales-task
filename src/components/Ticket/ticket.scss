@@ -3,9 +3,13 @@
   flex-direction: column;
   background-color: #FFFFFF;
   width: 502px;  
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.10);
   border-radius: 5px;
   margin-bottom: 20px;
+}
+
+.ticket:hover {
+  transition: all 0.4s;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.10);
 }
 
 .top-info {
