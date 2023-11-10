@@ -1,37 +1,45 @@
 import React from "react";
-import './filter.scss';
+import "./filter.scss";
 
 import { useDispatch } from "react-redux";
 import { changeState } from "../../store/actions";
 
-import checkedLogo from './checkedLogo.svg';
-import uncheckedLogo from './uncheckedLogo.svg'
+import checkedLogo from "../../assets/img/checkedLogo.svg";
+import uncheckedLogo from "../../assets/img/uncheckedLogo.svg";
 
-export default function Filter({id, state}) {
-
+export default function Filter({ id, state }) {
   const dispatch = useDispatch();
 
   const handleCheck = () => {
-    dispatch(changeState({id}));
+    dispatch(changeState({ id }));
   };
 
   const filterName = () => {
     switch (id) {
-      case 'all': return 'Все';
-      case '0': return 'Без пересадок';
-      case '1': return '1 пересадка';
-      case '2': return '2 пересадки';
-      case '3': return '3 пересадки';
-      default: return '';
+      case "all":
+        return "Все";
+      case "0":
+        return "Без пересадок";
+      case "1":
+        return "1 пересадка";
+      case "2":
+        return "2 пересадки";
+      case "3":
+        return "3 пересадки";
+      default:
+        return "";
     }
-  }
+  };
 
   return (
     <div className="filter-item">
       <label htmlFor={id}>
-        <input id={id} type="checkbox" onClick={() => handleCheck()}/>
+        <input id={id} type="checkbox" onClick={() => handleCheck()} />
         <span htmlFor={id}>
-          <img src={state === true ? checkedLogo : uncheckedLogo} alt='checkbox'/>
+          <img
+            src={state === true ? checkedLogo : uncheckedLogo}
+            alt="checkbox"
+          />
         </span>
       </label>
       <div>{filterName()}</div>

@@ -1,11 +1,13 @@
-import { legacy_createStore as createStore, combineReducers } from 'redux';
+import { legacy_createStore as createStore, combineReducers, applyMiddleware } from 'redux';
 import {sortingReducer} from './sortingReducer';
-import { composeWithDevTools } from 'redux-devtools-extension';
 import { filterReducer } from './filterReducer';
+import thunk from 'redux-thunk';
+import { dataReducer } from './dataReducer';
 
 const rootReducer = combineReducers({
   sort: sortingReducer,
-  filter: filterReducer
+  filter: filterReducer,
+  data: dataReducer
 })
 
-export const store = createStore(rootReducer, composeWithDevTools());
+export const store = createStore(rootReducer, applyMiddleware(thunk));

@@ -4,3 +4,34 @@
   flex-direction: column;
   
 }
+
+button {
+  width: 502px;
+  height: 50px;
+  border: none;
+  background-color: #2196F3;
+  border-radius: 5px;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+button:hover {
+  background-color: #67b6f6;
+}
+
+.empty-ticket {
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
+  height: 100px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 14;
+}
+
+.empty-ticket span {
+  margin: auto;
+  width: 90%
+}
